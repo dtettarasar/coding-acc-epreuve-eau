@@ -167,6 +167,7 @@ const tester = () => {
   console.log(alreadyFoundComb([], [0,0,0]));
   */
 
+  /*
   console.log(allNumDifferent([0,1,4,5,6,7,3,9]));
   console.log("----");
   console.log(allNumDifferent([0,2,2,3,5]));
@@ -174,6 +175,7 @@ const tester = () => {
   console.log(allNumDifferent([0,2,1,3,5]));
   console.log("----");
   console.log(allNumDifferent([0,2,1,3,3,5]));
+  */
 
 }
 
