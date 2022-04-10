@@ -23,7 +23,7 @@ const numToArr = (number, digit) => {
 
   }
 
-  console.log(numArr);
+  return(numArr);
 
 }
 
@@ -107,6 +107,13 @@ const main = () => {
   // stocker les combinaisons trouvées
   const foundComb = [];
 
+  for (let i = 0; i < 1000; i++) {
+
+    const arrNum = numToArr(i,3);
+    console.log(arrNum);
+
+  }
+
 }
 
 const tester = () => {
@@ -144,5 +151,5 @@ const tester = () => {
 
 }
 
-//main();
-tester();
+main();
+//tester();
