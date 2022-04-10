@@ -87,7 +87,29 @@ const arrComparison = (arrOne, arrTwo) => {
 
 // s'assurer que tous les nombres d'un array soient bien différents
 const allNumDifferent = (array) => {
-  //TO DO
+
+  for (let i = 0; i < array.length; i++) {
+
+    const elemToTest = array[i];
+    let recurrence = 0;
+    // console.log(elemToTest);
+
+    for (let j = 0; j < array.length;j++){
+      if (elemToTest == array[j]) {
+        recurrence++;
+      }
+    }
+
+    if (recurrence != 1) {
+      return false;
+    }
+
+    // console.log("recurrence: " + recurrence);
+
+  }
+
+  return true;
+
 }
 
 // identifier si une combinaison a déjà été trouvé et ajouté dans un array
@@ -131,15 +153,27 @@ const tester = () => {
   ];
 
   // doit logger true
+  /*
   console.log(alreadyFoundComb(foundComb, [3,1,2]));
   console.log(alreadyFoundComb(foundComb, [4,2,3]));
   console.log(alreadyFoundComb(foundComb, [0,5,0]));
+  */
 
   // doit logguer false
+  /*
   console.log(alreadyFoundComb(foundComb, [0,0,0]));
   console.log(alreadyFoundComb(foundComb, [5,6,0]));
   console.log(alreadyFoundComb(foundComb, [3,2,0]));
   console.log(alreadyFoundComb([], [0,0,0]));
+  */
+
+  console.log(allNumDifferent([0,1,4,5,6,7,3,9]));
+  console.log("----");
+  console.log(allNumDifferent([0,2,2,3,5]));
+  console.log("----");
+  console.log(allNumDifferent([0,2,1,3,5]));
+  console.log("----");
+  console.log(allNumDifferent([0,2,1,3,3,5]));
 
 }
 
@@ -166,5 +200,5 @@ const main = () => {
 
 }
 
-main();
-//tester();
+//main();
+tester();
