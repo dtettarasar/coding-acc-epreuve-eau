@@ -66,12 +66,38 @@ const bubbleSort = (array) => {
 
 }
 
+//Comparaison d'array
+const arrComparison = (arrOne, arrTwo) => {
+
+  const sortedArrOne = bubbleSort(arrOne);
+  const sortedArrTwo = bubbleSort(arrTwo);
+
+  /*
+  console.log(sortedArrOne);
+  console.log(sortedArrTwo);
+  */
+
+  if (sortedArrOne.join('') == sortedArrTwo.join('')) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
 const main = () => {
 
-
+  /*
   for (let i = 0; i < 1000; i++) {
     numToArr(i,3);
-  }
+  }*/
+
+  /*
+  console.log(arrComparison([0,1,0], [0,0,1]));
+  console.log(arrComparison([0,1,2], [0,0,1]));
+  console.log(arrComparison([8,9,7], [7,8,9]));
+  console.log(arrComparison([0,1,1], [1,0,1]));
+  */
 
 }
 
