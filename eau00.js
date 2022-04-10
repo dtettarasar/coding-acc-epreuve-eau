@@ -27,7 +27,7 @@ const numToArr = (number, digit) => {
 
 }
 
-//tri à bulle
+// tri à bulle
 const bubbleSort = (array) => {
 
     //console.log(array);
@@ -66,7 +66,7 @@ const bubbleSort = (array) => {
 
 }
 
-//Comparaison d'array
+// Comparaison d'array
 const arrComparison = (arrOne, arrTwo) => {
 
   const sortedArrOne = bubbleSort(arrOne);
@@ -85,7 +85,31 @@ const arrComparison = (arrOne, arrTwo) => {
 
 }
 
+// identifier si une combinaison a déjà été trouvé et ajouté dans un array
+const alreadyFoundComb = (allFoundComb, combToTest) => {
+
+  for (let i = 0; i < allFoundComb.length; i++) {
+
+    const testComparison = arrComparison(allFoundComb[i], combToTest);
+
+    if (testComparison) {
+      return true;
+    }
+
+  }
+
+  return false;
+
+}
+
 const main = () => {
+
+  // stocker les combinaisons trouvées
+  const foundComb = [];
+
+}
+
+const tester = () => {
 
   /*
   for (let i = 0; i < 1000; i++) {
@@ -99,6 +123,26 @@ const main = () => {
   console.log(arrComparison([0,1,1], [1,0,1]));
   */
 
+  const foundComb = [
+    [1,2,3],
+    [3,2,4],
+    [7,8,9],
+    [0,0,3],
+    [0,4,4],
+    [5,0,0]
+  ];
+
+  // doit logger true
+  console.log(alreadyFoundComb(foundComb, [3,1,2]));
+  console.log(alreadyFoundComb(foundComb, [4,2,3]));
+  console.log(alreadyFoundComb(foundComb, [0,5,0]));
+
+  // doit logguer false
+  console.log(alreadyFoundComb(foundComb, [0,0,0]));
+  console.log(alreadyFoundComb(foundComb, [5,6,0]));
+  console.log(alreadyFoundComb(foundComb, [3,2,0]));
+
 }
 
-main();
+//main();
+tester();
