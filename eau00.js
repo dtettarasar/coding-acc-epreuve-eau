@@ -85,6 +85,11 @@ const arrComparison = (arrOne, arrTwo) => {
 
 }
 
+// s'assurer que tous les nombres d'un array soient bien différents
+const allNumDifferent = (array) => {
+  //TO DO
+}
+
 // identifier si une combinaison a déjà été trouvé et ajouté dans un array
 const alreadyFoundComb = (allFoundComb, combToTest) => {
 
@@ -99,20 +104,6 @@ const alreadyFoundComb = (allFoundComb, combToTest) => {
   }
 
   return false;
-
-}
-
-const main = () => {
-
-  // stocker les combinaisons trouvées
-  const foundComb = [];
-
-  for (let i = 0; i < 1000; i++) {
-
-    const arrNum = numToArr(i,3);
-    console.log(arrNum);
-
-  }
 
 }
 
@@ -148,6 +139,30 @@ const tester = () => {
   console.log(alreadyFoundComb(foundComb, [0,0,0]));
   console.log(alreadyFoundComb(foundComb, [5,6,0]));
   console.log(alreadyFoundComb(foundComb, [3,2,0]));
+  console.log(alreadyFoundComb([], [0,0,0]));
+
+}
+
+const main = () => {
+
+  // stocker les combinaisons trouvées
+  const foundComb = [];
+
+  for (let i = 0; i < 1000; i++) {
+
+    const arrNum = numToArr(i,3);
+    //console.log(arrNum);
+
+    if (!alreadyFoundComb(foundComb, arrNum)) {
+      foundComb.push(arrNum);
+    }
+
+  }
+
+  // affiche résultat final
+  for (let i = 0; i < foundComb.length; i++) {
+    console.log(foundComb[i]);
+  }
 
 }
 
