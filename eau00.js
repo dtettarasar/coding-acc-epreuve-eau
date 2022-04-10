@@ -187,7 +187,7 @@ const main = () => {
     const arrNum = numToArr(i,3);
     //console.log(arrNum);
 
-    if (!alreadyFoundComb(foundComb, arrNum)) {
+    if (!alreadyFoundComb(foundComb, arrNum) && allNumDifferent(arrNum)) {
       foundComb.push(arrNum);
     }
 
@@ -200,5 +200,5 @@ const main = () => {
 
 }
 
-//main();
-tester();
+main();
+//tester();
