@@ -2,34 +2,29 @@
 
 // functions
 
-const getAllArr = () => {
+// convertir des nombres en array
+const numToArr = (number, digit) => {
 
-    const mainArr = [];
+  const numArr = number.toString().split('');
 
-    for (let i = 0; i < 1000; i++) {
-        const numArr = i.toString().split('');
+  if (numArr.length < digit) {
 
-        if (numArr.length == 1) {
-            for (let j = 0; j < 2;j++) {
-                numArr.unshift('0');
-            }
-        } else if (numArr.length == 2) {
-            numArr.unshift('0');
-        }
-
-        mainArr.push(numArr);
+    for (let i = 0; i <= digit - numArr.length; i++) {
+      numArr.unshift('0');
     }
 
-    for (let i = 0; i < mainArr.length; i++) {
-        console.log(mainArr[i]);
-    }
+  }
+
+  console.log(numArr);
 
 }
 
 
 const main = () => {
 
-    getAllArr();
+  for (let i = 0; i < 1000; i++) {
+    numToArr(i,3);
+  }
 
 }
 
