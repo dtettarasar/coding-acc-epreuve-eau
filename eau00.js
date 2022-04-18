@@ -59,7 +59,7 @@ const arrComparison = (arrOne, arrTwo) => {
   const sortedArrOne = bubbleSort(arrOne);
   const sortedArrTwo = bubbleSort(arrTwo);
 
-  if (sortedArrOne.join('') == sortedArrTwo.join('')) {
+  if (sortedArrOne.join('') === sortedArrTwo.join('')) {
     return true;
   } else {
     return false;
@@ -76,12 +76,12 @@ const allNumDifferent = (array) => {
     let recurrence = 0;
 
     for (let j = 0; j < array.length;j++){
-      if (elemToTest == array[j]) {
+      if (elemToTest === array[j]) {
         recurrence++;
       }
     }
 
-    if (recurrence != 1) {
+    if (recurrence !== 1) {
       return false;
     }
 
