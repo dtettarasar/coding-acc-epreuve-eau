@@ -38,7 +38,9 @@ const generateComb = () => {
       combArr.push(j);
       //console.log(combArr);
 
-      fullArr.push(combArr);
+      if (allNumDifferent(combArr)) {
+          fullArr.push(combArr);
+      }
 
     }
 
@@ -58,4 +60,4 @@ const main = () => {
 
 }
 
-//main();
+main();
