@@ -1,7 +1,5 @@
 // Combinaisons de 3 chiffres
 
-// functions
-
 // convertir des nombres en array
 const numToArr = (number, digit) => {
 
@@ -61,11 +59,6 @@ const arrComparison = (arrOne, arrTwo) => {
   const sortedArrOne = bubbleSort(arrOne);
   const sortedArrTwo = bubbleSort(arrTwo);
 
-  /*
-  console.log(sortedArrOne);
-  console.log(sortedArrTwo);
-  */
-
   if (sortedArrOne.join('') == sortedArrTwo.join('')) {
     return true;
   } else {
@@ -81,7 +74,6 @@ const allNumDifferent = (array) => {
 
     const elemToTest = array[i];
     let recurrence = 0;
-    // console.log(elemToTest);
 
     for (let j = 0; j < array.length;j++){
       if (elemToTest == array[j]) {
@@ -92,8 +84,6 @@ const allNumDifferent = (array) => {
     if (recurrence != 1) {
       return false;
     }
-
-    // console.log("recurrence: " + recurrence);
 
   }
 
@@ -126,7 +116,6 @@ const main = () => {
   for (let i = 0; i < 1000; i++) {
 
     const arrNum = numToArr(i,3);
-    //console.log(arrNum);
 
     if (!alreadyFoundComb(foundComb, arrNum) && allNumDifferent(arrNum)) {
       foundComb.push(arrNum);
