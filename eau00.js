@@ -17,7 +17,6 @@ const numToArr = (number, digit) => {
     numArrInitLength = numArr.length;
 
     for (let i = 0; i < digit - numArrInitLength; i++) {
-      // console.log(i)
       numArr.unshift(0);
     }
 
@@ -30,39 +29,29 @@ const numToArr = (number, digit) => {
 // tri à bulle
 const bubbleSort = (array) => {
 
-    //console.log(array);
+  let arrIsSorted = true;
 
-    const process = () => {
+  for (let i = 0; i < array.length; i++) {
 
-        let arrIsSorted = true;
+      if (array[i] > array[i + 1]) {
 
-        for (let i = 0;i < array.length; i++) {
+          arrIsSorted = false;
 
-            //console.log(array[i]);
+          let smaller = array[i + 1];
+          let higher = array[i];
 
-            if (array[i] > array[i + 1]) {
+          array[i] = smaller;
+          array[i + 1] = higher;
 
-                arrIsSorted = false;
+      }
 
-                let smaller = array[i + 1];
-                let higher = array[i];
+      if (!arrIsSorted) {
+          bubbleSort(array);
+      }
 
-                array[i] = smaller;
-                array[i + 1] = higher;
+  }
 
-            }
-
-            if (!arrIsSorted) {
-                process();
-            }
-
-        }
-
-    }
-
-    process();
-
-    return array;
+  return array;
 
 }
 
