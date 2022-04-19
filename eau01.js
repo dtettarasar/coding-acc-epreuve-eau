@@ -24,6 +24,52 @@ const allNumDifferent = (array) => {
 
 }
 
+// tri à bulle
+const bubbleSort = (array) => {
+
+    let arrIsSorted = true;
+  
+    for (let i = 0; i < array.length; i++) {
+  
+        if (array[i] > array[i + 1]) {
+  
+            arrIsSorted = false;
+  
+            let smaller = array[i + 1];
+            let higher = array[i];
+  
+            array[i] = smaller;
+            array[i + 1] = higher;
+  
+        }
+  
+        if (!arrIsSorted) {
+            bubbleSort(array);
+        }
+  
+    }
+  
+    return array;
+  
+  }
+
+// Comparaison d'array
+const arrComparison = (arrOne, arrTwo) => {
+
+    const sortedArrOne = bubbleSort(arrOne);
+    const sortedArrTwo = bubbleSort(arrTwo);
+
+    console.log(sortedArrOne.join(','));
+    console.log(sortedArrTwo.join(','));
+  
+    if (sortedArrOne.join(',') === sortedArrTwo.join(',')) {
+      return true;
+    } else {
+      return false;
+    }
+  
+}
+
 // générer toutes les combinaisons possibles
 const generateComb = () => {
 
@@ -60,4 +106,4 @@ const main = () => {
 
 }
 
-main();
+//main();
