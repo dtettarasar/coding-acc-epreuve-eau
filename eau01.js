@@ -51,16 +51,13 @@ const bubbleSort = (array) => {
   
     return array;
   
-  }
+}
 
 // Comparaison d'array
 const arrComparison = (arrOne, arrTwo) => {
 
     const sortedArrOne = bubbleSort(arrOne);
     const sortedArrTwo = bubbleSort(arrTwo);
-
-    console.log(sortedArrOne.join(','));
-    console.log(sortedArrTwo.join(','));
   
     if (sortedArrOne.join(',') === sortedArrTwo.join(',')) {
       return true;
@@ -68,6 +65,21 @@ const arrComparison = (arrOne, arrTwo) => {
       return false;
     }
   
+}
+
+// checker si une combinaison n'a pas déjà été trouvée
+const combAlreadyFound = (arrToFind, mainArr) => {
+
+    for (let i = 0; i < mainArr.length; i++) {
+
+        if (arrComparison(arrToFind, mainArr[i])) {
+            return true;
+        }
+
+    }
+
+    return false;
+
 }
 
 // générer toutes les combinaisons possibles
@@ -82,9 +94,8 @@ const generateComb = () => {
       const combArr = [];
       combArr.push(i);
       combArr.push(j);
-      //console.log(combArr);
 
-      if (allNumDifferent(combArr)) {
+      if (allNumDifferent(combArr) && !combAlreadyFound(combArr, fullArr)) {
           fullArr.push(combArr);
       }
 
@@ -106,4 +117,4 @@ const main = () => {
 
 }
 
-//main();
+main();
