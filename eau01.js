@@ -130,9 +130,12 @@ const main = () => {
   const allCombs = generateComb();
 
   for (let i = 0; i < allCombs.length;i++) {
-    console.log(allCombs[i]);
+
+    const combStr = intArrToStr(allCombs[i]);
+    console.log(combStr);
+
   }
 
 }
 
-//main();
+main();
