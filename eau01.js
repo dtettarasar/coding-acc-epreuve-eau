@@ -119,7 +119,9 @@ const intArrToStr = (intArr) => {
 
     }
 
-    console.log(strArr);
+    const finalStr = strArr.join(" ");
+
+    return finalStr;
 
 }
 
@@ -134,5 +136,3 @@ const main = () => {
 }
 
 //main();
-
-intArrToStr([12, 4, 78, 99, 1, 5, 8, 10]);
