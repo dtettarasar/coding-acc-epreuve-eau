@@ -107,6 +107,22 @@ const generateComb = () => {
 
 }
 
+//Convertir un array de nombre en str
+const intArrToStr = (intArr) => {
+
+    const strArr = [];
+
+    for (let i = 0; i < intArr.length; i++) {
+
+        const strToPush = intArr[i] < 10 ? "0" + intArr[i].toString() : intArr[i].toString();
+        strArr.push(strToPush);
+
+    }
+
+    console.log(strArr);
+
+}
+
 const main = () => {
 
   const allCombs = generateComb();
@@ -117,4 +133,6 @@ const main = () => {
 
 }
 
-main();
+//main();
+
+intArrToStr([12, 4, 78, 99, 1, 5, 8, 10]);
