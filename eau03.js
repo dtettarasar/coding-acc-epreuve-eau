@@ -16,8 +16,15 @@ const argTester = () => {
 
 }
 
+const getFibonacciSequence = () => {
+
+    const number = argTester();
+    console.log(number);
+
+}
+
 const main = () => {
 
 }
 
-console.log(argTester());
+getFibonacciSequence();
