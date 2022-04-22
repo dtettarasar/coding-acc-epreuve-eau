@@ -12,7 +12,7 @@ const argTester = () => {
         return false;
     }
 
-    return argument;
+    return parseInt(argument[0]);
 
 }
 
