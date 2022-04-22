@@ -27,16 +27,12 @@ const getFibonacciSequence = () => {
         fiboValue = fiboArr[i -2] + fiboArr[i - 1];
 
         fiboArr.push(fiboValue);
-
-        console.log(fiboValue);
     }
 
-    //console.log(number);
+    return fiboArr;
 
 }
 
 const main = () => {
 
 }
-
-getFibonacciSequence();
