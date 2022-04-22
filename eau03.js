@@ -19,7 +19,19 @@ const argTester = () => {
 const getFibonacciSequence = () => {
 
     const number = argTester();
-    console.log(number);
+
+    const fiboArr = [0, 1];
+
+    for (let i = 2; i <= number; i++) {
+
+        fiboValue = fiboArr[i -2] + fiboArr[i - 1];
+
+        fiboArr.push(fiboValue);
+
+        console.log(fiboValue);
+    }
+
+    //console.log(number);
 
 }
 
