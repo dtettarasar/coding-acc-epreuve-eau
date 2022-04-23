@@ -16,10 +16,41 @@ const argTester = () => {
 
 }
 
-const isPrimeNumber = () => {}
+const isPrimeNumber = (int) => {
 
-const findNextPrimeNumber = () => {}
+    if (int === 1) {
+        return false;
+    }
+
+    const divider = [];
+
+    for (let i = int; i > 0; i--){
+
+        const modulo = int % i;
+
+        if (modulo === 0) {
+            divider.push(i);
+        }
+
+        if (divider.length > 2) {
+            break;
+        }
+
+    }
+
+    if (divider.length === 2 && divider[0] === int && divider[1] === 1) {
+        return true;
+    } else {
+        return false;
+    }
+
+
+}
+
+const findNextPrimeNumber = (int) => {
+
+}
 
 const main = () => {}
 
-console.log(argTester());
+console.log(isPrimeNumber(argTester()));
