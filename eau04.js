@@ -1,5 +1,6 @@
 // Prochain nombre premier
 
+// Récupérer l'argument
 const argTester = () => {
 
     const argument = process.argv.slice(2);
@@ -16,6 +17,7 @@ const argTester = () => {
 
 }
 
+// Vérifier si un nombre est un nombre premier
 const isPrimeNumber = (int) => {
 
     if (int === 1) {
@@ -47,10 +49,30 @@ const isPrimeNumber = (int) => {
 
 }
 
-const findNextPrimeNumber = (int) => {
+// Trouver le premier nombre premier supérieur au nombre passé dans le fonction.
+const getNextPrimeNumber = (int) => {
+
+    let i = int;
+
+    do {
+        i++;
+    } while (!isPrimeNumber(i));
+
+    return i;
 
 }
 
-const main = () => {}
+const main = () => {
 
-console.log(isPrimeNumber(argTester()));
+    const number = argTester();
+
+    if (number) {
+
+        const nextPrimeNumber = getNextPrimeNumber(number);
+        console.log(nextPrimeNumber);
+
+    }
+
+}
+
+main();
