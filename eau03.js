@@ -1,5 +1,6 @@
 // Suite de Fibonacci
 
+//Récupérer l'argument
 const argTester = () => {
 
     const argument = process.argv.slice(2);
@@ -16,9 +17,8 @@ const argTester = () => {
 
 }
 
-const getFibonacciSequence = () => {
-
-    const number = argTester();
+// Générer la suite de Fibonacci à partir d'un nombre
+const getFibonacciSequence = (number) => {
 
     const fiboArr = [0, 1];
 
@@ -35,4 +35,13 @@ const getFibonacciSequence = () => {
 
 const main = () => {
 
+    const int = argTester();
+
+    if (int) {
+        const fiboSeq = getFibonacciSequence(int);
+        console.log(fiboSeq[fiboSeq.length - 1]);
+    }
+
 }
+
+main();
