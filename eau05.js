@@ -19,6 +19,17 @@ const argTester = () => {
 
 }
 
+const arrComparison = (arrOne, arrTwo) => {
+
+    if (arrOne.length === arrTwo.length) {
+        console.log(arrOne);
+        console.log(arrTwo);
+    } else {
+        return false;
+    }
+
+}
+
 const strInStr = (obj) => {
 
     const fullStrArr = obj.fullStr.split('');
@@ -38,9 +49,8 @@ const strInStr = (obj) => {
                 fullStrExtract.push(fullStrArr[i + j]);
 
             }
-
-            console.log(fullStrArr[i]);
-            console.log(fullStrExtract);
+            
+            arrComparison(fullStrExtract, sampleStrArr);
 
         }
 
