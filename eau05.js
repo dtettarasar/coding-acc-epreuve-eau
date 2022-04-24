@@ -24,8 +24,18 @@ const strInStr = (obj) => {
     const fullStrArr = obj.fullStr.split('');
     const sampleStrArr = obj.sampleStr.split('');
 
-    console.log(fullStrArr);
-    console.log(sampleStrArr);
+    //console.log(fullStrArr);
+    //console.log(sampleStrArr);
+
+    for (let i = 0; i < fullStrArr.length;i++) {
+
+        if (fullStrArr[i] === sampleStrArr[0]) {
+
+            console.log(fullStrArr[i]);
+
+        }
+
+    }
 
 }
 
