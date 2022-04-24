@@ -31,7 +31,16 @@ const strInStr = (obj) => {
 
         if (fullStrArr[i] === sampleStrArr[0]) {
 
+            const fullStrExtract = [];
+
+            for (let j = 0; j < sampleStrArr.length; j++) {
+
+                fullStrExtract.push(fullStrArr[i + j]);
+
+            }
+
             console.log(fullStrArr[i]);
+            console.log(fullStrExtract);
 
         }
 
