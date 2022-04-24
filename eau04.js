@@ -49,7 +49,7 @@ const isPrimeNumber = (int) => {
 
 }
 
-// Trouver le premier nombre premier supérieur au nombre passé dans le fonction.
+// Trouver le premier nombre premier supérieur au nombre passé dans la fonction.
 const getNextPrimeNumber = (int) => {
 
     let i = int;
