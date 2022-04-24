@@ -12,8 +12,17 @@ const argTester = () => {
         return false;
     }
 
-    console.log(arguments);
+    strings.fullStr = arguments[0];
+    strings.sampleStr = arguments[1];
+
+    return strings;
 
 }
 
-argTester();
+const strInStr = (obj) => {
+
+    console.log(obj);
+
+}
+
+strInStr(argTester());
