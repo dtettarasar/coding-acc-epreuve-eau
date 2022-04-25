@@ -22,12 +22,14 @@ const argTester = () => {
 const arrComparison = (arrOne, arrTwo) => {
 
     if (arrOne.length === arrTwo.length) {
+
         console.log(arrOne);
         console.log(arrTwo);
-    } else {
-        return false;
-    }
 
+        for (let i = 0; i < arrOne.length; i++) {
+            console.log(arrOne[i] === arrTwo[i]);
+        }
+    } 
 }
 
 const strInStr = (obj) => {
@@ -58,4 +60,8 @@ const strInStr = (obj) => {
 
 }
 
-strInStr(argTester());
+const arg = argTester();
+
+if (arg) {
+    strInStr(arg);
+}
