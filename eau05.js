@@ -23,8 +23,8 @@ const arrComparison = (arrOne, arrTwo) => {
 
     if (arrOne.length === arrTwo.length) {
 
-        console.log(arrOne);
-        console.log(arrTwo);
+        // console.log(arrOne);
+        // console.log(arrTwo);
 
         for (let i = 0; i < arrOne.length; i++) {
             // console.log(arrOne[i] === arrTwo[i]);
@@ -57,8 +57,8 @@ const strInStr = (obj) => {
                 fullStrExtract.push(fullStrArr[i + j]);
 
             }
-            
-            console.log(arrComparison(fullStrExtract, sampleStrArr));
+
+            return arrComparison(fullStrExtract, sampleStrArr);
 
         }
 
@@ -66,8 +66,22 @@ const strInStr = (obj) => {
 
 }
 
-const arg = argTester();
+const main = () => {
 
-if (arg) {
-    strInStr(arg);
+    const arg = argTester();
+
+    if (arg) {
+
+        const testStr = strInStr(arg);
+        const result = testStr ? true : false ;
+
+        console.log(result);
+
+    }
+
 }
+
+
+main();
+
+
