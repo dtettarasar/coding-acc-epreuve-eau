@@ -23,15 +23,12 @@ const arrComparison = (arrOne, arrTwo) => {
 
     if (arrOne.length === arrTwo.length) {
 
-        // console.log(arrOne);
-        // console.log(arrTwo);
-
         for (let i = 0; i < arrOne.length; i++) {
-            // console.log(arrOne[i] === arrTwo[i]);
 
             if (arrOne[i] !== arrTwo[i]) {
                 return false;
             }
+
         }
 
         return true;
@@ -42,9 +39,6 @@ const strInStr = (obj) => {
 
     const fullStrArr = obj.fullStr.split('');
     const sampleStrArr = obj.sampleStr.split('');
-
-    //console.log(fullStrArr);
-    //console.log(sampleStrArr);
 
     for (let i = 0; i < fullStrArr.length;i++) {
 
@@ -74,7 +68,6 @@ const main = () => {
 
         const testStr = strInStr(arg);
         const result = testStr ? true : false ;
-
         console.log(result);
 
     }
