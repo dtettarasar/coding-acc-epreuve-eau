@@ -4,7 +4,7 @@
 const argTester = () => {
 
     const argument = process.argv.slice(2);
-    const pattern = /(?=.*[a-zA-Z])/
+    const pattern = /(?=.*[a-zA-Z\u00C0-\u00FF])/
 
     if (argument.length !== 1 || !pattern.test(argument[0])) {
 
