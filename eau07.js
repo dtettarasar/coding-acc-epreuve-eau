@@ -25,4 +25,16 @@ const updateStr = (str) => {
 
 }
 
-console.log(argTester());
+const main = () => {
+
+    const argument = argTester();
+
+    if (argument) {
+
+        updateStr(argument);
+
+    }
+
+}
+
+main();
