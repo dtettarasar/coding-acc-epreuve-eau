@@ -20,6 +20,19 @@ const argTester = () => {
 const updateStr = (str) => {
 
     const strArr = str.toLowerCase().split('');
+    const ltrPattern = /^[a-z\u00C0-\u00FF]*$/;
+    const spPattern = /[\s\t\n]/
+
+    for (let i = 0; i < strArr.length; i++) {
+        console.log(strArr[i]);
+        console.log(spPattern.test(strArr[i]));
+
+        if (ltrPattern.test(strArr[i]) && i === 0) {
+
+            strArr[i] = strArr[i].toUpperCase();
+
+        }
+    }
 
     console.log(strArr);
 
