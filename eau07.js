@@ -17,4 +17,12 @@ const argTester = () => {
     return argument[0];
 }
 
+const updateStr = (str) => {
+
+    const strArr = str.toLowerCase().split('');
+
+    console.log(strArr);
+
+}
+
 console.log(argTester());
