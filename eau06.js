@@ -16,9 +16,20 @@ const argTester = () => {
     return argument[0];
 }
 
-const updateStr = () => {
+const updateStr = (str) => {
 
+    const strArr = str.toLowerCase().split('');
+    const ltrPattern = /^[a-z\u00C0-\u00FF]*$/;
 
+    for (let i = 0; i < strArr.length; i++) {
+
+        console.log(strArr[i]);
+        console.log(ltrPattern.test(strArr[i]));
+
+    }
+
+    console.log(strArr);
+    
 
 }
 
@@ -27,8 +38,8 @@ const main = () => {
     const argument = argTester();
 
     if (argument) {
-    
-        console.log(argument);
+
+        updateStr(argument);
 
     }
 
