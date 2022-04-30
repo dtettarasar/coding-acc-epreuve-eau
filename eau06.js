@@ -1,5 +1,6 @@
 // Majuscule sur deux
 
+// Récupérer les arguments
 const argTester = () => {
 
     const argument = process.argv.slice(2);
@@ -16,6 +17,7 @@ const argTester = () => {
     return argument[0];
 }
 
+// Transformer la chaîne de caractère
 const updateStr = (str) => {
 
     const strArr = str.toLowerCase().split('');
@@ -43,6 +45,7 @@ const updateStr = (str) => {
 
 }
 
+// Afficher le résultat
 const main = () => {
 
     const argument = argTester();
