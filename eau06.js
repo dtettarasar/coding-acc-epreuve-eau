@@ -16,4 +16,22 @@ const argTester = () => {
     return argument[0];
 }
 
-console.log(argTester());
+const updateStr = () => {
+
+
+
+}
+
+const main = () => {
+
+    const argument = argTester();
+
+    if (argument) {
+    
+        console.log(argument);
+
+    }
+
+}
+
+main();
