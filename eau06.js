@@ -21,14 +21,25 @@ const updateStr = (str) => {
     const strArr = str.toLowerCase().split('');
     const ltrPattern = /^[a-z\u00C0-\u00FF]*$/;
 
+    let changeCase = false;
+
     for (let i = 0; i < strArr.length; i++) {
 
-        console.log(strArr[i]);
-        console.log(ltrPattern.test(strArr[i]));
+        // console.log(strArr[i]);
+        const isLetter = ltrPattern.test(strArr[i]);
+
+        if (!changeCase && isLetter) {
+            strArr[i] = strArr[i].toUpperCase();
+            changeCase = true;
+        } else if (isLetter) {
+            changeCase = false;
+        }
 
     }
+    
+    const finalStr = strArr.join('');
 
-    console.log(strArr);
+    console.log(finalStr);
     
 
 }
