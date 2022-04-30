@@ -39,8 +39,7 @@ const updateStr = (str) => {
     
     const finalStr = strArr.join('');
 
-    console.log(finalStr);
-    
+    return finalStr;
 
 }
 
@@ -50,7 +49,9 @@ const main = () => {
 
     if (argument) {
 
-        updateStr(argument);
+        const result = updateStr(argument);
+
+        console.log(result);
 
     }
 
