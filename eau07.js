@@ -27,7 +27,9 @@ const updateStr = (str) => {
         console.log(strArr[i]);
         console.log(spPattern.test(strArr[i]));
 
-        if (ltrPattern.test(strArr[i]) && i === 0) {
+        const firstCharIsLtr = ltrPattern.test(strArr[i]) && i === 0;
+
+        if (firstCharIsLtr) {
 
             strArr[i] = strArr[i].toUpperCase();
 
