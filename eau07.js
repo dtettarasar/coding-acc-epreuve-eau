@@ -24,19 +24,20 @@ const updateStr = (str) => {
     const spPattern = /[\s\t\n]/
 
     for (let i = 0; i < strArr.length; i++) {
-        console.log(strArr[i]);
-        console.log(spPattern.test(strArr[i]));
 
         const firstCharIsLtr = ltrPattern.test(strArr[i]) && i === 0;
+        const spaceAndLtr = spPattern.test(strArr[i-1]) && ltrPattern.test(strArr[i]);
 
-        if (firstCharIsLtr) {
+        if (firstCharIsLtr || spaceAndLtr) {
 
             strArr[i] = strArr[i].toUpperCase();
 
         }
     }
 
-    console.log(strArr);
+    const result = strArr.join('');
+
+    return result;
 
 }
 
@@ -46,7 +47,7 @@ const main = () => {
 
     if (argument) {
 
-        updateStr(argument);
+        console.log(updateStr(argument));
 
     }
 
