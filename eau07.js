@@ -17,6 +17,7 @@ const argTester = () => {
     return argument[0];
 }
 
+// Faire les changements dans la chaîne de caractère
 const updateStr = (str) => {
 
     const strArr = str.toLowerCase().split('');
@@ -41,13 +42,15 @@ const updateStr = (str) => {
 
 }
 
+// Récupérer le résultat et l'afficher dans la console
 const main = () => {
 
     const argument = argTester();
 
     if (argument) {
 
-        console.log(updateStr(argument));
+        const result = updateStr(argument);
+        console.log(result);
 
     }
 
