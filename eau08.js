@@ -1,5 +1,17 @@
 // Chiffres only 
 
+const main = () => {
+    
+    const argument = argTester();
+
+    if (argument) {
+
+        allIsDigit(argument);
+
+    }
+
+}
+
 // Récupérer Argument 
 const argTester = () => {
 
@@ -11,7 +23,7 @@ const argTester = () => {
         return false;
     }
 
-    console.log(argument[0]);
+    return argument[0];
 
 }
 
@@ -55,4 +67,4 @@ const allIsDigit = (str) => {
 
 }
 
-//argTester();
+main();
