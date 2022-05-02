@@ -15,4 +15,24 @@ const argTester = () => {
 
 }
 
-argTester();
+const isDigit = (char) => {
+
+    if (char.length !== 1) {
+        console.log("la fonction ne doit prendre qu'un seul caractère");
+        return false;
+    }
+
+    console.log(char);
+
+}
+
+const allIsDigit = (str) => {
+
+    // TO DO
+
+}
+
+//argTester();
+
+isDigit("test");
+isDigit("p");
