@@ -17,12 +17,31 @@ const argTester = () => {
 
 const isDigit = (char) => {
 
+    const intArr = [
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9'
+    ];
+
     if (char.length !== 1) {
         console.log("la fonction ne doit prendre qu'un seul caractère");
         return false;
     }
 
-    console.log(char);
+    for (let i = 0; i < intArr.length; i++) {
+        if (char === intArr[i]) {
+            return true;
+        }
+    }
+
+    return false;
 
 }
 
@@ -34,5 +53,7 @@ const allIsDigit = (str) => {
 
 //argTester();
 
-isDigit("test");
-isDigit("p");
+console.log(isDigit("test"));
+console.log(isDigit("p"));
+console.log(isDigit("3"));
+console.log(isDigit("0"));
