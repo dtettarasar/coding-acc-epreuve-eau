@@ -47,13 +47,10 @@ const isDigit = (char) => {
 
 const allIsDigit = (str) => {
 
-    // TO DO
+    const strArr = str.split('');
+
+    console.log(strArr);
 
 }
 
 //argTester();
-
-console.log(isDigit("test"));
-console.log(isDigit("p"));
-console.log(isDigit("3"));
-console.log(isDigit("0"));
