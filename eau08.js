@@ -6,7 +6,8 @@ const main = () => {
 
     if (argument) {
 
-        allIsDigit(argument);
+        const result = allIsDigit(argument);
+        console.log(result);
 
     }
 
@@ -63,7 +64,17 @@ const allIsDigit = (str) => {
 
     const strArr = str.split('');
 
-    console.log(strArr);
+    for (let i = 0; i < strArr.length; i++) {
+
+        const charIsDigit = isDigit(strArr[i]);
+
+        if (!charIsDigit) {
+            return false;
+        }
+
+    }
+
+    return true;
 
 }
 
