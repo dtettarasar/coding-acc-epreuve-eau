@@ -15,6 +15,7 @@ const argTester = () => {
 
 }
 
+// Identifier si un caractère est bien un chiffre
 const isDigit = (char) => {
 
     const intArr = [
@@ -45,6 +46,7 @@ const isDigit = (char) => {
 
 }
 
+// Vérifier si une chaîne de caractère est faite uniquement de chiffres
 const allIsDigit = (str) => {
 
     const strArr = str.split('');
