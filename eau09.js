@@ -37,8 +37,20 @@ const argTester = () => {
 
     }
 
-    console.log(numbers);
+    return numbers;
 
 }
 
-argTester();
+const main = () => {
+    
+    const arguments = argTester();
+
+    if (arguments) {
+
+        console.log(arguments);
+
+    }
+
+}
+
+main();
