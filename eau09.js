@@ -51,7 +51,9 @@ const getNumSerie = (min, max) => {
 
   }
 
-  console.log(numArr);
+  const finalStr = numArr.join(' ');
+
+  return finalStr;
 
 }
 
@@ -61,8 +63,8 @@ const main = () => {
 
     if (arguments) {
 
-        console.log(arguments);
-        getNumSerie(arguments.small, arguments.great);
+        const result = getNumSerie(arguments.small, arguments.great);
+        console.log(result);
 
     }
 
