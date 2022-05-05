@@ -41,13 +41,28 @@ const argTester = () => {
 
 }
 
+const getNumSerie = (min, max) => {
+
+  const numArr = [];
+
+  for (let i = min; i < max; i++) {
+
+    numArr.push(i);
+
+  }
+
+  console.log(numArr);
+
+}
+
 const main = () => {
-    
+
     const arguments = argTester();
 
     if (arguments) {
 
         console.log(arguments);
+        getNumSerie(arguments.small, arguments.great);
 
     }
 
