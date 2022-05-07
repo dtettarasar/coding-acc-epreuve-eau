@@ -4,6 +4,11 @@ const argTester = () => {
 
   const arguments = process.argv.slice(2);
 
+  const data = {
+    arrayToCheck: [],
+    elemToFind: ""
+  };
+
   if (arguments.length < 2) {
 
     console.log("Veuillez passez au moins deux chaînes de caractère en argument.");
@@ -13,11 +18,13 @@ const argTester = () => {
 
   }
 
-  for (let i = 0; i < arguments.length; i++) {
-      console.log(arguments[i]);
+  for (let i = 0; i < arguments.length - 1; i++) {
+      data.arrayToCheck.push(arguments[i]);
   }
 
-  return arguments;
+  data.elemToFind = arguments[arguments.length - 1];
+
+  return data;
 
 }
 
@@ -31,7 +38,7 @@ const main = () => {
 
   if (arguments) {
 
-    // console.log(arguments);
+    console.log(arguments);
 
   }
 
