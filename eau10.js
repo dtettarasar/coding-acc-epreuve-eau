@@ -13,8 +13,16 @@ const argTester = () => {
 
   }
 
+  for (let i = 0; i < arguments.length; i++) {
+      console.log(arguments[i]);
+  }
+
   return arguments;
 
+}
+
+const getIndex = (arrayToCheck, elemToFind) => {
+    
 }
 
 const main = () => {
@@ -23,7 +31,7 @@ const main = () => {
 
   if (arguments) {
 
-    console.log(arguments);
+    // console.log(arguments);
 
   }
 
