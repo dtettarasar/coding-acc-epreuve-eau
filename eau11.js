@@ -18,14 +18,26 @@ const argTester = () => {
             console.log(errorMsg);
             return false;
         } else {
-            data.push(parseInt(arguments[i]));
+
+            const int = parseInt(arguments[i]) < 0 ? parseInt(arguments[i]) * -1 : parseInt(arguments[i]);
+            data.push(int);
+            
         }
 
     }
 
-    console.log(arguments);
-    console.log(data);
+    return data;
 
 }
 
-argTester();
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+        console.log(arguments);
+    }
+
+}
+
+main();
