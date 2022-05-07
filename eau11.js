@@ -67,6 +67,14 @@ const findLowestVal = (array) => {
 
 }
 
+const getAllSubstracts = (arr, int) => {
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i] - int);
+    }
+
+}
+
 
 const main = () => {
 
@@ -74,7 +82,8 @@ const main = () => {
 
     if (arguments) {
         console.log(arguments);
-        findLowestVal(arguments);
+        //findLowestVal(arguments);
+        getAllSubstracts(arguments, arguments[0]);
     }
 
 }
