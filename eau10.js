@@ -28,7 +28,11 @@ const argTester = () => {
 
 }
 
-const getIndex = (arrayToCheck, elemToFind) => {
+const getIndex = (obj) => {
+
+    for (let i = 0; i < obj.arrayToCheck.length; i++) {
+        console.log(obj.arrayToCheck[i]);
+    }
     
 }
 
@@ -39,6 +43,7 @@ const main = () => {
   if (arguments) {
 
     console.log(arguments);
+    getIndex(arguments);
 
   }
 
