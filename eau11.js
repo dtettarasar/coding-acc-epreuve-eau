@@ -21,7 +21,7 @@ const argTester = () => {
 
             const int = parseInt(arguments[i]) < 0 ? parseInt(arguments[i]) * -1 : parseInt(arguments[i]);
             data.push(int);
-            
+
         }
 
     }
@@ -30,12 +30,51 @@ const argTester = () => {
 
 }
 
+// tri à bulle
+const bubbleSort = (array) => {
+
+    let arrIsSorted = true;
+  
+    for (let i = 0; i < array.length; i++) {
+  
+        if (array[i] > array[i + 1]) {
+  
+            arrIsSorted = false;
+  
+            let smaller = array[i + 1];
+            let higher = array[i];
+  
+            array[i] = smaller;
+            array[i + 1] = higher;
+  
+        }
+  
+        if (!arrIsSorted) {
+            bubbleSort(array);
+        }
+  
+    }
+  
+    return array;
+  
+}
+
+const findLowestVal = (array) => {
+
+    const arrSorted = bubbleSort(array);
+    console.log(arrSorted);
+    console.log(arrSorted[0]);
+
+}
+
+
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
         console.log(arguments);
+        findLowestVal(arguments);
     }
 
 }
