@@ -1,4 +1,4 @@
-// Différence minimum absolue 
+// Différence minimum absolue
 
 const argTester = () => {
 
@@ -6,7 +6,7 @@ const argTester = () => {
     const pattern = /^-?[0-9]+$/;
     const errorMsg = ("Veuillez passer une série de nombres entiers en argument (au moins deux nombres).\nExemple: node eau11.js 27 6 12 13");
     const data = [];
-    
+
     if (arguments.length < 2) {
         console.log(errorMsg);
         return false;
@@ -34,29 +34,29 @@ const argTester = () => {
 const bubbleSort = (array) => {
 
     let arrIsSorted = true;
-  
+
     for (let i = 0; i < array.length; i++) {
-  
+
         if (array[i] > array[i + 1]) {
-  
+
             arrIsSorted = false;
-  
+
             let smaller = array[i + 1];
             let higher = array[i];
-  
+
             array[i] = smaller;
             array[i + 1] = higher;
-  
+
         }
-  
+
         if (!arrIsSorted) {
             bubbleSort(array);
         }
-  
+
     }
-  
+
     return array;
-  
+
 }
 
 const findLowestVal = (array) => {
@@ -75,7 +75,7 @@ const getAllSubstracts = (arr, int) => {
         const diff = arr[i] - int;
         //console.log(arr[i] - int);
 
-        if (diff >= 0) {
+        if (diff > 0) {
             diffArr.push(diff);
         }
     }
@@ -91,7 +91,12 @@ const main = () => {
 
     if (arguments) {
         console.log(arguments);
-        console.log(getAllSubstracts(arguments, arguments[0]));
+
+        for (let i = 0; i < arguments.length; i++) {
+          const allSubstracts = getAllSubstracts(arguments, arguments[i]);
+          console.log(allSubstracts);
+        }
+
     }
 
 }
