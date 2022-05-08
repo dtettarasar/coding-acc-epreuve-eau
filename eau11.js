@@ -94,8 +94,7 @@ const getLowestSubs = (array) => {
       const allSubstracts = getAllSubstracts(array, array[i]);
       const lowestSub = findLowestVal(allSubstracts);
 
-      console.log(allSubstracts);
-      console.log(lowestSub);
+      // console.log(allSubstracts);
 
       if (lowestSub) {
         allResults.push(lowestSub);
@@ -103,8 +102,7 @@ const getLowestSubs = (array) => {
 
     }
 
-    console.log("all results")
-    console.log(allResults);
+    return allResults;
 
 }
 
@@ -113,7 +111,9 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        getLowestSubs(arguments);
+        const allLowestSubs = getLowestSubs(arguments);
+        const result = findLowestVal(allLowestSubs);
+        console.log(result);
     }
 
 }
