@@ -73,7 +73,6 @@ const getAllSubstracts = (arr, int) => {
 
     for (let i = 0; i < arr.length; i++) {
         const diff = arr[i] - int;
-        //console.log(arr[i] - int);
 
         if (diff > 0) {
             diffArr.push(diff);
@@ -85,18 +84,22 @@ const getAllSubstracts = (arr, int) => {
 }
 
 
+const getLowestSubs = (array) => {
+
+    for (let i = 0; i < array.length; i++) {
+      const allSubstracts = getAllSubstracts(array, array[i]);
+
+      console.log(allSubstracts);
+    }
+
+}
+
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
-        console.log(arguments);
-
-        for (let i = 0; i < arguments.length; i++) {
-          const allSubstracts = getAllSubstracts(arguments, arguments[i]);
-          console.log(allSubstracts);
-        }
-
+        getLowestSubs(arguments);
     }
 
 }
