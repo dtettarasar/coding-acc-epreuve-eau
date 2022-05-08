@@ -62,8 +62,10 @@ const bubbleSort = (array) => {
 const findLowestVal = (array) => {
 
     const arrSorted = bubbleSort(array);
-    console.log(arrSorted);
-    console.log(arrSorted[0]);
+    //console.log(arrSorted);
+    //console.log(arrSorted[0]);
+
+    return arrSorted[0];
 
 }
 
@@ -86,11 +88,23 @@ const getAllSubstracts = (arr, int) => {
 
 const getLowestSubs = (array) => {
 
+    const allResults = [];
+
     for (let i = 0; i < array.length; i++) {
       const allSubstracts = getAllSubstracts(array, array[i]);
+      const lowestSub = findLowestVal(allSubstracts);
 
       console.log(allSubstracts);
+      console.log(lowestSub);
+
+      if (lowestSub) {
+        allResults.push(lowestSub);
+      }
+
     }
+
+    console.log("all results")
+    console.log(allResults);
 
 }
 
