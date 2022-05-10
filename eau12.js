@@ -30,5 +30,49 @@ const argTester = () => {
 
 }
 
+// tri à bulle
+const bubbleSort = (array) => {
+
+    let arrIsSorted = true;
+
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] > array[i + 1]) {
+
+            arrIsSorted = false;
+
+            let smaller = array[i + 1];
+            let higher = array[i];
+
+            array[i] = smaller;
+            array[i + 1] = higher;
+
+        }
+
+        if (!arrIsSorted) {
+            bubbleSort(array);
+        }
+
+    }
+
+    return array;
+
+}
+
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+
+        const sortedArr = bubbleSort(arguments);
+        console.log(sortedArr);
+
+    }
+
+}
+
 console.log(argTester());
+main();
+
 
