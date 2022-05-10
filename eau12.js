@@ -66,7 +66,8 @@ const main = () => {
     if (arguments) {
 
         const sortedArr = bubbleSort(arguments);
-        console.log(sortedArr);
+        const finalStr = sortedArr.join(' ');
+        console.log(finalStr);
 
     }
 
