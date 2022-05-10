@@ -73,7 +73,6 @@ const main = () => {
 
 }
 
-console.log(argTester());
 main();
 
 
