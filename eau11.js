@@ -106,14 +106,22 @@ const getLowestSubs = (array) => {
 
 }
 
+const twiceSameNum = (array) => {
+    console.log(array);
+}
+
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
+        /*
         const allLowestSubs = getLowestSubs(arguments);
         const result = findLowestVal(allLowestSubs);
         console.log(result);
+        */
+
+        twiceSameNum(arguments);
     }
 
 }
