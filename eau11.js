@@ -108,6 +108,21 @@ const getLowestSubs = (array) => {
 
 const twiceSameNum = (array) => {
     console.log(array);
+
+    const arrSorted = bubbleSort(array);
+
+    console.log(arrSorted);
+
+    for (let i = 0; i < arrSorted.length; i++) {
+        
+        if (arrSorted[i] === arrSorted[i-1]) {
+            return true;
+        }
+
+    }
+
+    return false;
+
 }
 
 const main = () => {
@@ -121,7 +136,7 @@ const main = () => {
         console.log(result);
         */
 
-        twiceSameNum(arguments);
+        console.log(twiceSameNum(arguments));
     }
 
 }
