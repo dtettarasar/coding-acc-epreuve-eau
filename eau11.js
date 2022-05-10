@@ -107,11 +107,8 @@ const getLowestSubs = (array) => {
 }
 
 const twiceSameNum = (array) => {
-    console.log(array);
 
     const arrSorted = bubbleSort(array);
-
-    console.log(arrSorted);
 
     for (let i = 0; i < arrSorted.length; i++) {
         
@@ -130,13 +127,11 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        /*
-        const allLowestSubs = getLowestSubs(arguments);
-        const result = findLowestVal(allLowestSubs);
-        console.log(result);
-        */
 
-        console.log(twiceSameNum(arguments));
+        const allLowestSubs = getLowestSubs(arguments);
+        const result = twiceSameNum(arguments) ? 0 : findLowestVal(allLowestSubs);
+        console.log(result);
+
     }
 
 }
