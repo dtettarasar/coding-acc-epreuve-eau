@@ -40,8 +40,6 @@ const selectionSort = (array, indStart) => {
       lowestNumInd = i;
     }
 
-    //console.log(array[i]);
-
   }
 
   const temp = array[indStart];
@@ -53,7 +51,7 @@ const selectionSort = (array, indStart) => {
     selectionSort(array, indStart);
   }
 
-    return array;
+  return array;
 
 }
 
