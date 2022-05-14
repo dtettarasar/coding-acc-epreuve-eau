@@ -40,7 +40,7 @@ const selectionSort = (array, indStart) => {
       lowestNumInd = i;
     }
 
-    console.log(array[i]);
+    //console.log(array[i]);
 
   }
 
@@ -48,17 +48,12 @@ const selectionSort = (array, indStart) => {
   array[indStart] = array[lowestNumInd];
   array[lowestNumInd] = temp;
 
-  console.log("---");
-
   if (indStart !== array.length - 1) {
     indStart++;
-    console.log("indStart:" + indStart);
-    console.log("array: " + array);
     selectionSort(array, indStart);
-  } else {
-    console.log("end of execution");
-    console.log("array: " + array);
   }
+
+    return array;
 
 }
 
@@ -68,7 +63,8 @@ const main = () => {
 
   if (arguments) {
 
-    selectionSort(arguments, 0);
+    const result = selectionSort(arguments, 0);
+    console.log(result);
 
   }
 
