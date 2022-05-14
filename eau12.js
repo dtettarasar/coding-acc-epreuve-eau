@@ -1,4 +1,4 @@
-// Tri à bulle 
+// Tri à bulle
 
 const argTester = () => {
 
@@ -19,7 +19,7 @@ const argTester = () => {
             return false;
         } else {
 
-            const int = parseInt(arguments[i]) < 0 ? parseInt(arguments[i]) * -1 : parseInt(arguments[i]);
+            const int = parseInt(arguments[i]);
             data.push(int);
 
         }
@@ -74,5 +74,3 @@ const main = () => {
 }
 
 main();
-
-
