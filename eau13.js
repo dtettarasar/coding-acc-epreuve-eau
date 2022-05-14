@@ -30,4 +30,37 @@ const argTester = () => {
 
 }
 
-console.log(argTester());
+const selectionSort = (array, indStart) => {
+
+  for (let i = indStart; i < array.length; i++) {
+
+    console.log(array[i]);
+
+  }
+
+  console.log("---");
+
+  if (indStart !== array.length - 1) {
+    indStart++;
+    console.log("indStart:" + indStart);
+    selectionSort(array, indStart);
+  } else {
+    console.log("end of execution");
+    console.log("array: " + array);
+  }
+
+}
+
+const main = () => {
+
+  const arguments = argTester();
+
+  if (arguments) {
+
+    selectionSort(arguments, 0);
+
+  }
+
+}
+
+main();
