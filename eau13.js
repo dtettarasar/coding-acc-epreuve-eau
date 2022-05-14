@@ -63,7 +63,8 @@ const main = () => {
 
   if (arguments) {
 
-    const result = selectionSort(arguments, 0);
+    const sortedArr = selectionSort(arguments, 0);
+    const result = sortedArr.join(' ');
     console.log(result);
 
   }
