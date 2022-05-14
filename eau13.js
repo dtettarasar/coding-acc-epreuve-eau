@@ -32,17 +32,28 @@ const argTester = () => {
 
 const selectionSort = (array, indStart) => {
 
+  let lowestNumInd = indStart;
+
   for (let i = indStart; i < array.length; i++) {
+
+    if (array[i] < array[lowestNumInd]) {
+      lowestNumInd = i;
+    }
 
     console.log(array[i]);
 
   }
+
+  const temp = array[indStart];
+  array[indStart] = array[lowestNumInd];
+  array[lowestNumInd] = temp;
 
   console.log("---");
 
   if (indStart !== array.length - 1) {
     indStart++;
     console.log("indStart:" + indStart);
+    console.log("array: " + array);
     selectionSort(array, indStart);
   } else {
     console.log("end of execution");
