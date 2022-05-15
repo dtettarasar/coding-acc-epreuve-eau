@@ -14,32 +14,35 @@ const argTester = () => {
         return false;
     }
 
-    // console.log(arguments);
-
     for (let i = 0; i < arguments.length; i++) {
-        getAsciiVal(arguments[i]);
+
+        const argObj = {
+            argStr: arguments[i],
+            argAscii: getAsciiVal(arguments[i])
+        };
+
+        data.push(argObj);
+
     }
 
-    return arguments;
+    return data;
 
 }
 
 const getAsciiVal = (str) => {
 
     const strArr = str.split('');
-    console.log(strArr);
 
     let asciiSum = 0;
 
     for (let i = 0; i < strArr.length; i++) {
 
         const ascii = strArr[i].charCodeAt(0);
-        //console.log(strArr[i] + ": " + ascii);
         asciiSum += ascii;
 
     }
 
-    console.log("Str Ascii value: " + asciiSum);
+    return asciiSum;
 
 }
 
@@ -48,7 +51,7 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        //getAsciiVal(arguments[0]);
+        console.log(arguments);
     }
 
 }
