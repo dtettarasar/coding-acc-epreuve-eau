@@ -12,7 +12,9 @@ const argTester = () => {
         return false;
     }
 
-    console.log(arguments);
+    // console.log(arguments);
+
+    return arguments;
 
 }
 
@@ -22,3 +24,15 @@ const getAsciiVal = (str) => {
     console.log(strArr);
 
 }
+
+const main = () => {
+
+    const arguments = argTester();
+
+    if (arguments) {
+        getAsciiVal(arguments[0]);
+    }
+
+}
+
+main();
