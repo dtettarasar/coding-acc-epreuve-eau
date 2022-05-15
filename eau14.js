@@ -23,12 +23,17 @@ const getAsciiVal = (str) => {
     const strArr = str.split('');
     console.log(strArr);
 
+    let asciiSum = 0;
+
     for (let i = 0; i < strArr.length; i++) {
 
         const ascii = strArr[i].charCodeAt(0);
         console.log(strArr[i] + ": " + ascii);
+        asciiSum += ascii;
 
     }
+
+    console.log("Str Ascii value: " + asciiSum);
 
 }
 
