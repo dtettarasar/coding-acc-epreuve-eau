@@ -16,4 +16,9 @@ const argTester = () => {
 
 }
 
-argTester();
+const getAsciiVal = (str) => {
+
+    const strArr = str.split('');
+    console.log(strArr);
+
+}
