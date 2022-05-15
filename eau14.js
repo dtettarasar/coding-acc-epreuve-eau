@@ -4,6 +4,8 @@ const argTester = () => {
 
     const arguments = process.argv.slice(2);
 
+    const data = [];
+
     if (arguments.length < 2) {
 
         console.log("Veuillez passer au moins deux chaînes de caractère en argument");
@@ -13,6 +15,10 @@ const argTester = () => {
     }
 
     // console.log(arguments);
+
+    for (let i = 0; i < arguments.length; i++) {
+        getAsciiVal(arguments[i]);
+    }
 
     return arguments;
 
@@ -28,7 +34,7 @@ const getAsciiVal = (str) => {
     for (let i = 0; i < strArr.length; i++) {
 
         const ascii = strArr[i].charCodeAt(0);
-        console.log(strArr[i] + ": " + ascii);
+        //console.log(strArr[i] + ": " + ascii);
         asciiSum += ascii;
 
     }
@@ -42,7 +48,7 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        getAsciiVal(arguments[0]);
+        //getAsciiVal(arguments[0]);
     }
 
 }
