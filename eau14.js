@@ -23,6 +23,13 @@ const getAsciiVal = (str) => {
     const strArr = str.split('');
     console.log(strArr);
 
+    for (let i = 0; i < strArr.length; i++) {
+
+        const ascii = strArr[i].charCodeAt(0);
+        console.log(strArr[i] + ": " + ascii);
+
+    }
+
 }
 
 const main = () => {
