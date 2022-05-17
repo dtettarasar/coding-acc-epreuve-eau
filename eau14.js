@@ -46,12 +46,38 @@ const getAsciiVal = (str) => {
 
 }
 
+
+const selectionSortObj = (array, indStart) => {
+
+    let lowestNumInd = indStart;
+  
+    for (let i = indStart; i < array.length; i++) {
+  
+      if (array[i].argAscii < array[lowestNumInd].argAscii) {
+        lowestNumInd = i;
+      }
+  
+    }
+  
+    const temp = array[indStart];
+    array[indStart] = array[lowestNumInd];
+    array[lowestNumInd] = temp;
+  
+    if (indStart !== array.length - 1) {
+      indStart++;
+      selectionSortObj(array, indStart);
+    }
+  
+    return array;
+  
+  }
+
 const main = () => {
 
     const arguments = argTester();
 
     if (arguments) {
-        console.log(arguments);
+        console.log(selectionSortObj(arguments,0));
     }
 
 }
