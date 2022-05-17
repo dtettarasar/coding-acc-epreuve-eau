@@ -77,7 +77,8 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        console.log(selectionSortObj(arguments,0));
+        const sortedArr = selectionSortObj(arguments,0)
+        console.log(sortedArr);
     }
 
 }
