@@ -78,8 +78,7 @@ const main = () => {
 
     if (arguments) {
 
-        const sortedArg = selectionSortObj(arguments,0)
-        console.log(sortedArg);
+        const sortedArg = selectionSortObj(arguments,0);
 
         const strArr = [];
 
