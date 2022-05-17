@@ -77,8 +77,18 @@ const main = () => {
     const arguments = argTester();
 
     if (arguments) {
-        const sortedArr = selectionSortObj(arguments,0)
-        console.log(sortedArr);
+
+        const sortedArg = selectionSortObj(arguments,0)
+        console.log(sortedArg);
+
+        const strArr = [];
+
+        for (let i = 0; i < sortedArg.length; i++) {
+            strArr.push(sortedArg[i].argStr);
+        }
+
+        console.log(strArr.join(' '));
+
     }
 
 }
