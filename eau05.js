@@ -1,5 +1,6 @@
 // String dans String
 
+// Récupérer les chaînes de caractère passées en argument
 const argTester = () => {
 
     const arguments = process.argv.slice(2);
@@ -19,6 +20,7 @@ const argTester = () => {
 
 }
 
+// Comparer deux arrays
 const arrComparison = (arrOne, arrTwo) => {
 
     if (arrOne.length === arrTwo.length) {
@@ -35,6 +37,7 @@ const arrComparison = (arrOne, arrTwo) => {
     } 
 }
 
+// Vérifie si la deuxième string est bien présente dans la première
 const strInStr = (obj) => {
 
     const fullStrArr = obj.fullStr.split('');
@@ -60,6 +63,7 @@ const strInStr = (obj) => {
 
 }
 
+// Afficher le résultat
 const main = () => {
 
     const arg = argTester();
