@@ -27,7 +27,6 @@ const updateStr = (str) => {
 
     for (let i = 0; i < strArr.length; i++) {
 
-        // console.log(strArr[i]);
         const isLetter = ltrPattern.test(strArr[i]);
 
         if (!changeCase && isLetter) {
