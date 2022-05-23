@@ -62,6 +62,7 @@ const getNextPrimeNumber = (int) => {
 
 }
 
+// Afficher le résultat
 const main = () => {
 
     const number = argTester();
