@@ -33,6 +33,7 @@ const getFibonacciSequence = (number) => {
 
 }
 
+// Afficher le résultat
 const main = () => {
 
     const int = argTester();
