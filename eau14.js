@@ -54,6 +54,21 @@ const objAreSorted = (objOne, objTwo) => {
     console.log(objTwo);
     console.log(shortLength);
 
+    for (let i = 0; i < shortLength; i++) {
+
+        if (objOne.argAscii[i] < objTwo.argAscii[i]) {
+            console.log("objOne");
+            break;
+        } else if (objOne.argAscii[i] > objTwo.argAscii[i]){
+            console.log("objTwo");
+            break;
+        }
+        /*
+        console.log(objOne.argAscii[i]);
+        console.log(objTwo.argAscii[i]);
+        */
+    }
+
 }
 
 
