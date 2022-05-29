@@ -48,6 +48,12 @@ const getAsciiVal = (str) => {
 
 const objAreSorted = (objOne, objTwo) => {
 
+    const shortLength = objOne.argAscii.length >  objTwo.argAscii.length ? objTwo.argAscii.length : objOne.argAscii.length;
+
+    console.log(objOne);
+    console.log(objTwo);
+    console.log(shortLength);
+
 }
 
 
@@ -74,7 +80,7 @@ const selectionSortObj = (array, indStart) => {
 
     return array;
 
-  }
+}
 
 const main = () => {
 
@@ -99,4 +105,5 @@ const main = () => {
 //main();
 
 const testArg = argTester();
-console.log(testArg);
+//console.log(testArg);
+objAreSorted(testArg[0], testArg[1]);
