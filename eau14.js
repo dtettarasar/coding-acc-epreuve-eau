@@ -59,18 +59,39 @@ const objAreSorted = (objOne, objTwo) => {
 
         if (objOne.argAscii[i] < objTwo.argAscii[i]) {
             return true;
-        } else if (objOne.argAscii[i] > objTwo.argAscii[i]){
+        } else if (objOne.argAscii[i] > objTwo.argAscii[i]) {
             return false;
         }
     }
 
-    //Si les deux strings sont presque identiques, identifer laquelle est la plus longue pour en déduire l'ordre.
+    // Si les deux strings sont presque identiques, identifer laquelle est la plus longue pour en déduire l'ordre.
     return objOne.argAscii.length < objTwo.argAscii.length;
 
 }
 
 const bubbleSortObj = (array) => {
-    console.log(array);
+
+    let arrIsSorted = true;
+
+    for (let i = 0; i < array.length - 1; i++) {
+
+        if (!objAreSorted(array[i], array[i + 1])) {
+            arrIsSorted = false;
+
+            let smaller = array[i + 1];
+            let higher = array[i];
+
+            array[i] = smaller;
+            array[i + 1] = higher;
+        }
+
+        if (!arrIsSorted) {
+            bubbleSortObj(array);
+        }
+
+    }
+
+    return array;
 }
 
 const main = () => {
@@ -79,16 +100,10 @@ const main = () => {
 
     if (arguments) {
 
-        bubbleSortObj(arguments);
+        console.log(bubbleSortObj(arguments));
 
     }
 
 }
 
 main();
-
-/*
-const testArg = argTester();
-//console.log(testArg);
-console.log(objAreSorted(testArg[0], testArg[1]));
-*/
