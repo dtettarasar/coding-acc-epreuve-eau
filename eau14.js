@@ -100,7 +100,15 @@ const main = () => {
 
     if (arguments) {
 
-        console.log(bubbleSortObj(arguments));
+        const sortedArr = bubbleSortObj(arguments);
+
+        const resultArr = [];
+
+        for (let i = 0; i < sortedArr.length; i++) {
+            resultArr.push(sortedArr[i].argStr);
+        }
+
+        console.log(resultArr.join(' '));
 
     }
 
