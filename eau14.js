@@ -25,7 +25,6 @@ const argTester = () => {
 
     }
 
-    console.log(data);
     return data;
 
 }
@@ -44,6 +43,10 @@ const getAsciiVal = (str) => {
     }
 
     return asciiArrVal;
+
+}
+
+const objAreSorted = (objOne, objTwo) => {
 
 }
 
@@ -95,4 +98,5 @@ const main = () => {
 
 //main();
 
-argTester();
+const testArg = argTester();
+console.log(testArg);
