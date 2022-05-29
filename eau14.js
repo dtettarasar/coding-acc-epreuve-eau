@@ -48,26 +48,23 @@ const getAsciiVal = (str) => {
 
 const objAreSorted = (objOne, objTwo) => {
 
-    const shortLength = objOne.argAscii.length >  objTwo.argAscii.length ? objTwo.argAscii.length : objOne.argAscii.length;
+    const shortLength = objOne.argAscii.length > objTwo.argAscii.length ? objTwo.argAscii.length : objOne.argAscii.length;
 
-    console.log(objOne);
-    console.log(objTwo);
-    console.log(shortLength);
+    if (objOne.argStr === objTwo.argStr) {
+        return true;
+    }
 
     for (let i = 0; i < shortLength; i++) {
 
         if (objOne.argAscii[i] < objTwo.argAscii[i]) {
-            console.log("objOne");
             return true;
         } else if (objOne.argAscii[i] > objTwo.argAscii[i]){
-            console.log("objTwo");
             return false;
         }
-        /*
-        console.log(objOne.argAscii[i]);
-        console.log(objTwo.argAscii[i]);
-        */
     }
+
+    //Si les deux strings sont presque identiques, identifer laquelle est la plus longue pour en déduire l'ordre.
+    return objOne.argAscii.length < objTwo.argAscii.length;
 
 }
 
