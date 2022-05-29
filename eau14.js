@@ -46,6 +46,7 @@ const getAsciiVal = (str) => {
 
 }
 
+// Checker si la string de l'objet 1 a une valeur ascii inférieure à celle de l'objet 2
 const objAreSorted = (objOne, objTwo) => {
 
     const shortLength = objOne.argAscii.length > objTwo.argAscii.length ? objTwo.argAscii.length : objOne.argAscii.length;
@@ -68,30 +69,8 @@ const objAreSorted = (objOne, objTwo) => {
 
 }
 
-
-const selectionSortObj = (array, indStart) => {
-
-    let lowestNumInd = indStart;
-
-    for (let i = indStart; i < array.length; i++) {
-
-      if (array[i].argAscii < array[lowestNumInd].argAscii) {
-        lowestNumInd = i;
-      }
-
-    }
-
-    const temp = array[indStart];
-    array[indStart] = array[lowestNumInd];
-    array[lowestNumInd] = temp;
-
-    if (indStart !== array.length - 1) {
-      indStart++;
-      selectionSortObj(array, indStart);
-    }
-
-    return array;
-
+const bubbleSortObj = (array) => {
+    console.log(array);
 }
 
 const main = () => {
@@ -100,22 +79,16 @@ const main = () => {
 
     if (arguments) {
 
-        const sortedArg = selectionSortObj(arguments,0);
-
-        const strArr = [];
-
-        for (let i = 0; i < sortedArg.length; i++) {
-            strArr.push(sortedArg[i].argStr);
-        }
-
-        console.log(strArr.join(' '));
+        bubbleSortObj(arguments);
 
     }
 
 }
 
-//main();
+main();
 
+/*
 const testArg = argTester();
 //console.log(testArg);
 console.log(objAreSorted(testArg[0], testArg[1]));
+*/
