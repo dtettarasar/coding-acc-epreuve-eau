@@ -25,6 +25,7 @@ const argTester = () => {
 
     }
 
+    console.log(data);
     return data;
 
 }
@@ -33,16 +34,16 @@ const getAsciiVal = (str) => {
 
     const strArr = str.split('');
 
-    let asciiSum = 0;
+    let asciiArrVal = [];
 
     for (let i = 0; i < strArr.length; i++) {
 
         const ascii = strArr[i].charCodeAt(0);
-        asciiSum += ascii;
+        asciiArrVal.push(ascii);
 
     }
 
-    return asciiSum;
+    return asciiArrVal;
 
 }
 
@@ -50,26 +51,26 @@ const getAsciiVal = (str) => {
 const selectionSortObj = (array, indStart) => {
 
     let lowestNumInd = indStart;
-  
+
     for (let i = indStart; i < array.length; i++) {
-  
+
       if (array[i].argAscii < array[lowestNumInd].argAscii) {
         lowestNumInd = i;
       }
-  
+
     }
-  
+
     const temp = array[indStart];
     array[indStart] = array[lowestNumInd];
     array[lowestNumInd] = temp;
-  
+
     if (indStart !== array.length - 1) {
       indStart++;
       selectionSortObj(array, indStart);
     }
-  
+
     return array;
-  
+
   }
 
 const main = () => {
@@ -92,4 +93,6 @@ const main = () => {
 
 }
 
-main();
+//main();
+
+argTester();
